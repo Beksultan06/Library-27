@@ -1,6 +1,18 @@
 from django.urls import path
+from rest_framework.routers import DefaultRouter 
 
 from apps.library.views import *
+
+router = DefaultRouter()
+router.register(r"authors", AuthorAPI, basename='author')
+router.register(r"books", BookAPI, basename='book')
+router.register(r'book-list', BookListAPI, basename='book-list')
+
+urlpatterns = [
+    
+]
+
+urlpatterns += router.urls
 
 # urlpatterns = [
 #     path("authors/", AuthorListAPIView.as_view(), name="author-list"),

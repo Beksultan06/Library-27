@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django_filters',
 
     'apps.library',
+    'apps.users',
 ]
 
 MIDDLEWARE = [
@@ -147,3 +148,5 @@ REST_FRAMEWORK = {
         'rest_framework.filters.OrderingFilter',
     ]
 }
+
+AUTH_USER_MODEL = 'users.User'
