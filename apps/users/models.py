@@ -19,7 +19,6 @@ class CustomUserManager(BaseUserManager):
 
 class User(AbstractUser, PermissionsMixin):
     phone = models.CharField(max_length=50)
-
     objects = CustomUserManager()
 
     USERNAME_FIELD = 'username'
